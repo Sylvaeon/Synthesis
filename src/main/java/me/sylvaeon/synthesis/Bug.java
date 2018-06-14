@@ -10,8 +10,8 @@ public class Bug {
 
 	public Bug() {
 		direction = 0;
-		x = 1;
-		y = 2;
+		x = MAX_X / 2;
+		y = MAX_Y / 2;
 	}
 
 	public void update() {
