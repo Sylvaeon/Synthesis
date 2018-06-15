@@ -9,8 +9,5 @@
         <module name="Synthesis" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Synthesis" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -6,6 +6,7 @@ import me.sylvaeon.synthesis.effects.Updatable;
 import org.jglr.jchroma.JChroma;
 import org.jglr.jchroma.effects.KeyboardEffect;
 import org.jglr.jchroma.utils.ColorRef;
+import org.jglr.jchroma.utils.KeyboardKeys;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.jnativehook.keyboard.NativeKeyEvent;
@@ -25,6 +26,8 @@ public class Main implements NativeKeyListener {
 	}
 
 	public void nativeKeyPressed(NativeKeyEvent nativeKeyEvent) {
+		System.out.println("KeyCode: " + nativeKeyEvent.getKeyCode());
+		System.out.println("Razer Q: " + KeyboardKeys.RZKEY_Q);
 		if (activeKeyboardEffect instanceof Reactable) {
 			((Reactable) activeKeyboardEffect).onKeyPress(nativeKeyEvent);
 		}
@@ -47,10 +50,7 @@ public class Main implements NativeKeyListener {
 		logger.setLevel(Level.OFF);
 		GlobalScreen.addNativeKeyListener(new Main());
 
-
-
 		setKeyboardEffect(new BugKeyboardEffect(new ColorRef(0xFF, 0, 0xFF), new ColorRef(0, 0xFF, 0xFF), new ColorRef(0x01, 0x01, 0x01), new ColorRef(0x11, 0x11, 0x11)));
-
 
 		long sleepTime = 10;
 		Thread thread = new Thread() {
