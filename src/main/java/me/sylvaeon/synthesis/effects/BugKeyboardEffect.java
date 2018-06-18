@@ -9,7 +9,6 @@ import org.jnativehook.keyboard.NativeKeyEvent;
 public class BugKeyboardEffect extends CustomKeyboardEffect implements Updatable, Reactable {
 
 	private static int[][] BUG_KEYS;
-	private static int[] BORDER_KEYS;
 	private static Bug bug;
 
 	ColorRef primaryColor;

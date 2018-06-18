@@ -8,7 +8,7 @@ public interface KeyboardKeys {
     /*
     Copied from RzChromaSDKTypes.h
      */
-    int RZKEY_ESC = 0x0001,                 /*!< Esc (VK_ESCAPE) */
+    int     RZKEY_ESC = 0x0001,                 /*!< Esc (VK_ESCAPE) */
             RZKEY_F1 = 0x0003,                  /*!< F1 (VK_F1) */
             RZKEY_F2 = 0x0004,                  /*!< F2 (VK_F2) */
             RZKEY_F3 = 0x0005,                  /*!< F3 (VK_F3) */
@@ -106,17 +106,17 @@ public interface KeyboardKeys {
             RZKEY_MACRO3 = 0x0300,              /*!< Macro Key 3 */
             RZKEY_MACRO4 = 0x0400,              /*!< Macro Key 4 */
             RZKEY_MACRO5 = 0x0500,              /*!< Macro Key 5 */
-            RZKEY_OEM_1 = 0x0101,               /*!< ~ (tilde/半角/全角) (VK_OEM_3) */
-            RZKEY_OEM_2 = 0x010C,               /*!< -- (minus) (VK_OEM_MINUS) */
-            RZKEY_OEM_3 = 0x010D,               /*!< = (equal) (VK_OEM_PLUS) */
-            RZKEY_OEM_4 = 0x020C,               /*!< [ (left sqaure bracket) (VK_OEM_4) */
-            RZKEY_OEM_5 = 0x020D,               /*!< ] (right square bracket) (VK_OEM_6) */
-            RZKEY_OEM_6 = 0x020E,               /*!< \ (backslash) (VK_OEM_5) */
-            RZKEY_OEM_7 = 0x030B,               /*!< ; (semi-colon) (VK_OEM_1) */
-            RZKEY_OEM_8 = 0x030C,               /*!< ' (apostrophe) (VK_OEM_7) */
-            RZKEY_OEM_9 = 0x040A,               /*!< , (comma) (VK_OEM_COMMA) */
-            RZKEY_OEM_10 = 0x040B,              /*!< . (period) (VK_OEM_PERIOD) */
-            RZKEY_OEM_11 = 0x040C,              /*!< / (forward slash) (VK_OEM_2) */
+            RZKEY_GRAVE = 0x0101,               /*!< `/~ (tilde/半角/全角) (VK_OEM_3) */
+            RZKEY_MINUS = 0x010C,               /*!< -- (minus) (VK_OEM_MINUS) */
+            RZKEY_EQUAL = 0x010D,               /*!< = (equal) (VK_OEM_PLUS) */
+            RZKEY_LBRACKET = 0x020C,            /*!< [ (left sqaure bracket) (VK_OEM_4) */
+            RZKEY_RBRACKET = 0x020D,            /*!< ] (right square bracket) (VK_OEM_6) */
+            RZKEY_BACKSLASH = 0x020E,           /*!< \ (backslash) (VK_OEM_5) */
+            RZKEY_SEMICOLON = 0x030B,           /*!< ; (semi-colon) (VK_OEM_1) */
+            RZKEY_APOSTROPHE = 0x030C,          /*!< ' (apostrophe) (VK_OEM_7) */
+            RZKEY_COMMA = 0x040A,               /*!< , (comma) (VK_OEM_COMMA) */
+            RZKEY_PERIOD = 0x040B,              /*!< . (period) (VK_OEM_PERIOD) */
+            RZKEY_SLASH = 0x040C,               /*!< / (forward slash) (VK_OEM_2) */
             RZKEY_EUR_1 = 0x030D,               /*!< "#" (VK_OEM_5) */
             RZKEY_EUR_2 = 0x0402,               /*!< \ (VK_OEM_102) */
             RZKEY_JPN_1 = 0x0015,               /*!< ¥ (0xFF) */
@@ -131,9 +131,8 @@ public interface KeyboardKeys {
             RZKEY_KOR_5 = 0x0504,               /*!< (VK_OEM_PA1) */
             RZKEY_KOR_6 = 0x0509,               /*!< 한/영 (0xFF) */
             RZKEY_KOR_7 = 0x050A,               /*!< (0xFF) */
-            RZKEY_INVALID = 0xFFFF;              /*!< Invalid keys. */
-
-    int RZLED_LOGO = 0x1004; /* Razer logo */
+            RZKEY_INVALID = 0xFFFF,             /*!< Invalid keys. */
+            RZLED_LOGO = 0x1004;                /* Razer logo */
 
     static int getRow(int key) {
         return (key >> 8) & 0xFF;

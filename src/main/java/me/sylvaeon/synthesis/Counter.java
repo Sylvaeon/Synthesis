@@ -1,7 +1,7 @@
 package me.sylvaeon.synthesis;
 
-public class Counter {
-    public int count;
+public class Counter implements Comparable<Counter> {
+    private int count;
 
     public Counter() {
         count = 0;
@@ -22,4 +22,9 @@ public class Counter {
     public void reset() {
         count = 0;
     }
+
+	@Override
+	public int compareTo(Counter o) {
+		return new Integer(count).compareTo(o.count);
+	}
 }

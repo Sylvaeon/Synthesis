@@ -1,7 +1,7 @@
 package me.sylvaeon.synthesis;
 
 public class Vector2d {
-	int x, y;
+	private int x, y;
 
 	public Vector2d(int x, int y) {
 		this.x = x;
@@ -40,4 +40,19 @@ public class Vector2d {
 		y--;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Vector2d) {
+			Vector2d vector2d = (Vector2d) obj;
+			if(vector2d.getX() == this.getX() && vector2d.getY() == this.getY()) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public String toString() {
+		return "x:" + x + ",y:" + y;
+	}
 }
